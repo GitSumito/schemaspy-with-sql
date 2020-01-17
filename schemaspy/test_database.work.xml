@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<database name="test_database" schema="work" type="MySQL - 5.7.29">
+   <tables>
+      <table catalog="test_database" name="t_jigyosyo" numRows="0" remarks="" type="TABLE">
+         <column autoUpdated="true" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT UNSIGNED"/>
+         <column autoUpdated="false" digits="0" id="1" name="jiscode" nullable="true" remarks="" size="255" type="VARCHAR"/>
+         <column autoUpdated="false" digits="0" id="2" name="ooguchi_jigyosyo_name_kana" nullable="true" remarks="" size="255" type="VARCHAR"/>
+         <column autoUpdated="false" digits="0" id="3" name="ooguchi_jigyosyo_name_kanji" nullable="true" remarks="" size="255" type="VARCHAR"/>
+         <column autoUpdated="false" digits="0" id="4" name="pref_kanji" nullable="true" remarks="" size="255" type="VARCHAR"/>
+         <column autoUpdated="false" digits="0" id="5" name="city_kanji" nullable="true" remarks="" size="255" type="VARCHAR"/>
+         <column autoUpdated="false" digits="0" id="6" name="town_area_kanji" nullable="true" remarks="" size="255" type="VARCHAR"/>
+         <column autoUpdated="false" digits="0" id="7" name="street_kanji" nullable="true" remarks="" size="255" type="VARCHAR"/>
+         <column autoUpdated="false" digits="0" id="8" name="zipcode" nullable="true" remarks="" size="255" type="VARCHAR"/>
+         <column autoUpdated="false" digits="0" id="9" name="zipcode_old" nullable="true" remarks="" size="255" type="VARCHAR"/>
+         <column autoUpdated="false" digits="0" id="10" name="post_office_in_charge" nullable="true" remarks="" size="255" type="VARCHAR"/>
+         <column autoUpdated="false" digits="0" id="11" name="flag1" nullable="true" remarks="" size="0" type="BIT"/>
+         <column autoUpdated="false" digits="0" id="12" name="flag2" nullable="true" remarks="" size="0" type="BIT"/>
+         <column autoUpdated="false" digits="0" id="13" name="flag3" nullable="true" remarks="" size="0" type="BIT"/>
+         <primaryKey column="id" sequenceNumberInPK="1"/>
+         <index name="PRIMARY" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+         <index name="zipcode" unique="false">
+            <column ascending="true" name="zipcode"/>
+         </index>
+      </table>
+      <table catalog="test_database" name="t_ken_all" numRows="0" remarks="" type="TABLE">
+         <column autoUpdated="true" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT UNSIGNED"/>
+         <column autoUpdated="false" digits="0" id="1" name="jiscode" nullable="true" remarks="" size="255" type="VARCHAR"/>
+         <column autoUpdated="false" digits="0" id="2" name="zipcode_old" nullable="true" remarks="" size="255" type="VARCHAR"/>
+         <column autoUpdated="false" digits="0" id="3" name="zipcode" nullable="true" remarks="" size="255" type="VARCHAR"/>
+         <column autoUpdated="false" digits="0" id="4" name="pref_kana" nullable="true" remarks="" size="255" type="VARCHAR"/>
+         <column autoUpdated="false" digits="0" id="5" name="city_kana" nullable="true" remarks="" size="255" type="VARCHAR"/>
+         <column autoUpdated="false" digits="0" id="6" name="street_kana" nullable="true" remarks="" size="255" type="VARCHAR"/>
+         <column autoUpdated="false" digits="0" id="7" name="pref" nullable="true" remarks="" size="255" type="VARCHAR"/>
+         <column autoUpdated="false" digits="0" id="8" name="city" nullable="true" remarks="" size="255" type="VARCHAR"/>
+         <column autoUpdated="false" digits="0" id="9" name="street" nullable="true" remarks="" size="255" type="VARCHAR"/>
+         <column autoUpdated="false" digits="0" id="10" name="flag1" nullable="true" remarks="" size="3" type="TINYINT"/>
+         <column autoUpdated="false" digits="0" id="11" name="flag2" nullable="true" remarks="" size="3" type="TINYINT"/>
+         <column autoUpdated="false" digits="0" id="12" name="flag3" nullable="true" remarks="" size="3" type="TINYINT"/>
+         <column autoUpdated="false" digits="0" id="13" name="flag4" nullable="true" remarks="" size="3" type="TINYINT"/>
+         <column autoUpdated="false" digits="0" id="14" name="flag5" nullable="true" remarks="" size="3" type="TINYINT"/>
+         <column autoUpdated="false" digits="0" id="15" name="flag6" nullable="true" remarks="" size="3" type="TINYINT"/>
+         <primaryKey column="id" sequenceNumberInPK="1"/>
+         <index name="PRIMARY" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+         <index name="jiscode" unique="false">
+            <column ascending="true" name="jiscode"/>
+         </index>
+         <index name="zipcode" unique="false">
+            <column ascending="true" name="zipcode"/>
+         </index>
+      </table>
+      <table catalog="test_database" name="t_price" numRows="0" remarks="" type="TABLE">
+         <column autoUpdated="true" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT UNSIGNED"/>
+         <column autoUpdated="false" digits="0" id="1" name="teikei_or_hiteikei" nullable="true" remarks="" size="255" type="VARCHAR"/>
+         <column autoUpdated="false" digits="0" id="2" name="weight_less_than" nullable="true" remarks="" size="10" type="INT"/>
+         <column autoUpdated="false" digits="0" id="3" name="price" nullable="true" remarks="" size="10" type="INT"/>
+         <primaryKey column="id" sequenceNumberInPK="1"/>
+         <index name="PRIMARY" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+      </table>
+   </tables>
+</database>
