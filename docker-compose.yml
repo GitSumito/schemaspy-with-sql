@@ -24,21 +24,23 @@ services:
       - LANG=ja_JP.UTF-8
       - TZ=Asia/Tokyo
     working_dir: "/app"
-    command: "java -jar schemaspy.jar"
+    depends_on:
+      - mysql
+    command: "sh -x /app/bin/wait.sh mysql docker docker employee java -jar schemaspy.jar"
+# also modify db info docker/schemaspy/config/schemaspy.properties
 
   mysql:
     image: mysql:5.7
     container_name: mysql_host
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: test_database
+      MYSQL_DATABASE: employee
       MYSQL_USER: docker
       MYSQL_PASSWORD: docker
       TZ: 'Asia/Tokyo'
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
     command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     volumes:
-      - ./docker/mysql/my.cnf:/etc/mysql/conf.d/my.cnf
       - ./docker/mysql/sql:/docker-entrypoint-initdb.d
-      - ./docker/mysql/data:/var/lib/mysql
     ports:
       - 3306:3306

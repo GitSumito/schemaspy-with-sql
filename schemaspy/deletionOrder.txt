@@ -1,3 +1,0 @@
-t_price
-t_ken_all
-t_jigyosyo
