@@ -1,22 +1,21 @@
 # schemaspy
-## description
-schemaspy with docker
 
-## commands
-### build docker-compose  
+# How to use
+
+Put DDL files stored below with `.sql` extension.
+` schemaspy/docker/mysql/sql/ `
+ex: schemaspy/docker/mysql/sql/001-create.sql`
+
+
+## build
 ```bash
-docker-compose build
+make build
 ```
 
-### run docker-compose  
+## run
 ```bash
-docker-compose up -d
-```
-
-### stop docker-compose  
-```bash
-docker-compose down
+make up
 ```
 
 ### access
-http://localhost:8081
+http://localhost/
