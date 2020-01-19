@@ -4,6 +4,7 @@
 
 Put DDL files stored below with `.sql` extension.
 ` schemaspy/docker/mysql/sql/ `
+
 ex: schemaspy/docker/mysql/sql/001-create.sql`
 
 
